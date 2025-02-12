@@ -1,7 +1,7 @@
 import React from "react";
+import Header from "../components/header"; // Import the header
 import "./homepage.css";
 
-// Import images from the src/images/ folder
 import mclaren from "../images/mclaren logo.jpg";
 import ferrari from "../images/ferrari.jpg";
 import redbull from "../images/red-bull.jpg";
@@ -29,15 +29,8 @@ const teams = [
 const HomePage = () => {
   return (
     <div className="homepage">
-      <header className="header">
-        <h1>Athlete Bio</h1>
-        <div className="search-auth">
-          <input type="text" placeholder="Search..." />
-          <button>Sign up</button>
-          <button>Login</button>
-        </div>
-      </header>
-
+      <Header /> {/* Use Header component */}
+      
       <div className="team-logos">
         {teams.map((team, index) => (
           <img key={index} src={team.logo} alt={team.name} className="team-logo" />
@@ -49,7 +42,7 @@ const HomePage = () => {
         <div className="about-box">
           <h3 className="about-title">About Formula 1</h3>
           <p className="about-text">
-            Formula One, commonly known as F1, is the pinnacle of open-wheeled auto racing, established in 1950. The competition unfolds globally, featuring races known as Grands Prix, held on both specialized circuits and temporary urban tracks.F1 showcases a fierce rivalry among the world’s premier automotive brands to a global audience with an average of about 90 million viewers per grand prix. The vehicles, renowned for reaching speeds approximately 360 km/h (224 mph), boast 1.6L hybrid turbocharged engines that can rev up to 15,000 RPM. A standard Formula One race spans roughly 305 km (190 mi) for about 2 hours.
+            Formula One, commonly known as F1, is the pinnacle of open-wheeled auto racing, established in 1950. The competition unfolds globally, featuring races known as Grands Prix, held on both specialized circuits and temporary urban tracks. F1 showcases a fierce rivalry among the world’s premier automotive brands to a global audience with an average of about 90 million viewers per grand prix. The vehicles, renowned for reaching speeds approximately 360 km/h (224 mph), boast 1.6L hybrid turbocharged engines that can rev up to 15,000 RPM. A standard Formula One race spans roughly 305 km (190 mi) for about 2 hours.
           </p>
         </div>
       </main>
